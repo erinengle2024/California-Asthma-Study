@@ -15,22 +15,83 @@
     </header>
     <div class="main-content">
         <div class="control-panel animate__animated animate__rotateInDownLeft">
-            <div>filter 1<select class="selection-bar" id="select1"></select></div>
-            <div>filter 2<select class="selection-bar" id="select2"></select></div>
-            <div>filter 3<select class="selection-bar" id="select3"></select></div>
-            <div>filter 4<select class="selection-bar" id="select4"></select></div>
-            <div>filter 5<select class="selection-bar" id="select5"></select></div>
-            <div>filter 6<select class="selection-bar" id="select6"></select></div>
+            <div class="checkbox">
+                <input type="checkbox" id="Population" value="Population">
+                <label for="Population">Population</label>
+            </div>
+            <div class="checkbox">
+                <input type="checkbox" id="Ozone" value="Ozone">
+                <label for="Ozone">Ozone</label>
+            </div>
+            <div class="checkbox">
+                <input type="checkbox" id="PM2.5" value="PM2.5">
+                <label for="PM2.5">PM2.5</label>
+            </div>
+            <div class="checkbox">
+                <input type="checkbox" id="Diesel" value="Diesel">
+                <label for="Diesel">Diesel</label>
+            </div>
+            <div class="checkbox">
+                <input type="checkbox" id="Pesticides" value="Pesticides">
+                <label for="Pesticides">Pesticides</label>
+            </div>
+            <div class="checkbox">
+                <input type="checkbox" id="Toxicity Release" value="Toxicity Release">
+                <label for="Toxicity Release">Toxicity Release</label>
+            </div>
+            <div class="checkbox">
+                <input type="checkbox" id="Traffic" value="Traffic">
+                <label for="Traffic">Traffic</label>
+            </div>
+            <div class="checkbox">
+                <input type="checkbox" id="Cleanup Sites" value="Cleanup Sites">
+                <label for="Cleanup Sites">Cleanup Sites</label>
+            </div>
+            <div class="checkbox">
+                <input type="checkbox" id="Cardiovascular Disease" value="Cardiovascular Disease">
+                <label for="Cardiovascular Disease">Cardiovascular Disease</label>
+            </div>
+            <div class="checkbox">
+                <input type="checkbox" id="Poverty" value="Poverty">
+                <label for="Poverty">Poverty</label>
+            </div>
+            <div class="checkbox">
+                <input type="checkbox" id="Wild Fires" value="Wild Fires">
+                <label for="Wild Fires">Wild Fires</label>
+            </div>
+            <div class="checkbox">
+                <input type="checkbox" id="Asthma Hospital Visits" value="Asthma Hospital Visits">
+                <label for="Asthma Hospital Visits">Asthma Hospital Visits</label>
+            </div>
+            <div class="checkbox">
+                <input type="checkbox" id="Asthma Diagnosis" value="Asthma Diagnosis">
+                <label for="Asthma Diagnosis">Asthma Diagnosis</label>
+            </div>
         </div>
         <div class="content animate__animated animate__fadeInRight" >
             <div class="chart">chart 1</div>
             <div class="chart">chart 2</div>
-            <div class="chart">chart 3</div>
-            <div class="chart">chart 4</div>
-            <div class="chart">chart 5</div>
-            <div class="chart">chart 6</div>
+        </div>
+        <div class="selectedDetails">
+            <table id="selectedTable">
+                <button id="resetButton">Reset</button>
+                <thead>
+
+                </thead>
+                <tbody></tbody>
+            </table>
         </div>
     </div>
+   
+    <script src="checkbox.js"></script>
 </body>
 </html>
+
+
+
+
+
+
+
+
 
