@@ -22,5 +22,6 @@ def get_data():
     results=[tuple(row[1:]) for row in results]
     return jsonify(results)
 
+
 if __name__ == '__main__':
     app.run(debug=True)
