@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Asthma Dashboard</title>
+    <link rel="stylesheet" type="text/css" href="../static/css/styles.css">
+    <!-- Add Leaflet CSS   -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+        integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="" />
+    <!-- Add Leaflet JS ( put after CSS)   -->
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+        integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+
+     <!-- Marker cluster JavaScript code -->
+     <script type="text/javascript" src="https://unpkg.com/leaflet.markercluster@1.0.3/dist/leaflet.markercluster.js"></script>
+
+     <!-- Marker cluster CSS -->
+     <link rel="stylesheet" type="text/css" href="https://unpkg.com/leaflet.markercluster@1.0.3/dist/MarkerCluster.css">
+     <link rel="stylesheet" type="text/css" href="https://unpkg.com/leaflet.markercluster@1.0.3/dist/MarkerCluster.Default.css">
+   
+     <!-- ========= word cloud imports======== -->
+   <!-- Your other CSS and JavaScript imports -->
+    <!-- Include d3.js -->
+    <script src="https://d3js.org/d3.v4.js"></script>
+    <!-- Load d3-cloud -->
+    <script src="https://cdn.jsdelivr.net/gh/holtzy/D3-graph-gallery@master/LIB/d3.layout.cloud.js"></script>
+    <style src="../static/css/wordCloud.css"></style>
+    <!-- ==================== -->
+     
+</head>
+<body>
+    <header>
+        <h1 class="animate__animated animate__bounce">Asthma Dashboard</h1>
+    </header>
+    <div class="main-content">
+        <div class="control-panel animate__animated animate__rotateInDownLeft">
+            <div class="checkbox">
+                <input type="checkbox" id="Population" value="Population">
+                <label for="Population">Population</label>
+            </div>
+            <div class="checkbox">
+                <input type="checkbox" id="Ozone" value="Ozone">
+                <label for="Ozone">Ozone</label>
+            </div>
+            <div class="checkbox">
+                <input type="checkbox" id="PM2.5" value="PM2.5">
+                <label for="PM2.5">PM2.5</label>
+            </div>
+            <div class="checkbox">
+                <input type="checkbox" id="Diesel" value="Diesel">
+                <label for="Diesel">Diesel</label>
+            </div>
+            <div class="checkbox">
+                <input type="checkbox" id="Pesticides" value="Pesticides">
+                <label for="Pesticides">Pesticides</label>
+            </div>
+            <div class="checkbox">
+                <input type="checkbox" id="Toxicity Release" value="Toxicity Release">
+                <label for="Toxicity Release">Toxicity Release</label>
+            </div>
+            <div class="checkbox">
+                <input type="checkbox" id="Traffic" value="Traffic">
+                <label for="Traffic">Traffic</label>
+            </div>
+            <div class="checkbox">
+                <input type="checkbox" id="Cleanup Sites" value="Cleanup Sites">
+                <label for="Cleanup Sites">Cleanup Sites</label>
+            </div>
+            <div class="checkbox">
+                <input type="checkbox" id="Cardiovascular Disease" value="Cardiovascular Disease">
+                <label for="Cardiovascular Disease">Cardiovascular Disease</label>
+            </div>
+            <div class="checkbox">
+                <input type="checkbox" id="Poverty" value="Poverty">
+                <label for="Poverty">Poverty</label>
+            </div>
+            <div class="checkbox">
+                <input type="checkbox" id="Wild Fires" value="Wild Fires">
+                <label for="Wild Fires">Wild Fires</label>
+            </div>
+            <div class="checkbox">
+                <input type="checkbox" id="Asthma Hospital Visits" value="Asthma Hospital Visits">
+                <label for="Asthma Hospital Visits">Asthma Hospital Visits</label>
+            </div>
+            <div class="checkbox">
+                <input type="checkbox" id="Asthma Diagnosis" value="Asthma Diagnosis">
+                <label for="Asthma Diagnosis">Asthma Diagnosis</label>
+            </div>
+        </div>
+        <div class="content animate__animated animate__fadeInRight" >
+            <div class="chart" id="chart1">Sarah</div>
+            <div class="chart" id="chart2"> <!-- erin -->
+                <div class="control-panel">
+                    <label for="data-category">Select Data Category:</label>
+                    <select id="data-category">
+                        <option value="Ozone Pctl">Ozone Pctl</option>
+                        <option value="PM2.5 Pctl">PM2.5 Pctl</option>
+                        <option value="Diesel PM Pctl">Diesel PM Pctl</option>
+                        <option value="Pesticides Pctl">Pesticides Pctl</option>
+                        <option value="Traffic Pctl">Traffic Pctl</option>
+                        <option value="Asthma Pctl">Asthma Pctl</option>
+                        <option value="Cardiovascular Disease Pctl">Cardiovascular Disease Pctl</option>
+                    </select>
+                </div>
+                <div class="content">
+                        <div id="word-cloud"></div>  
+                </div>
+        
+            <script src="../static/js/wordCloud.js"></script>
+            </div>
+            <div class="chart" id="chart3">Rontiff</div>
+            <div class="chart" id="chart4">Laila</div>
+        </div>
+        <div class="selectedDetails">
+            <table id="selectedTable">
+                <button id="resetButton">Reset</button>
+                <thead>
+
+                </thead>
+                <tbody></tbody>
+            </table>
+        </div>
+    </div>
+    <script src="../static/js/ron.js"></script>
+    <script src="../static/js/checkbox.js"></script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+

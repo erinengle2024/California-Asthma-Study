@@ -1,0 +1,14 @@
+#word-cloud {
+    width: 600px; /* Adjust width as needed */
+    height: 500px; /* Adjust height as needed */
+    border: 1px solid #ccc;
+    /* padding: 10px; */
+    /* overflow: hidden; */
+    /* position: relative; */
+}
+
+.word {
+    cursor: pointer;
+    /* white-space: nowrap; /* Prevent words from wrapping */ */
+    /* position: absolute; /* Position words within the div */ */
+}
